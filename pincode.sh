@@ -1,12 +1,11 @@
 #!/bin/bash
-read -p "Enter six digit PINCode : " PINCode
+read -p "PINCode : " PINCode
 
-pincodepat="^[0-9]{6}$"
+pincodepat="^[0-9]{6}$ || ^[0-9]{3}[[]][0-9]{3}$"
 
 if [[ $PINCode =~ $pincodepat ]]
 then
-        echo "Valid PIN code"
+        echo "Valid pin code"
 else
-        echo "Invalid PIN code"
+        echo "Invalid"
 fi
-
